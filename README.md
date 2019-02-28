@@ -1,4 +1,5 @@
-## Module for creating cron based lambdas
+# Module for creating cron based lambdas
+[![Maintained by Leandevops.io](https://img.shields.io/badge/maintained%20by-leandevops-green.svg)](https://img.shields.io/badge/maintained%20by-leandevops-green.svg)
 
 What it does:
 - Creates a role for lambda
