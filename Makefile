@@ -19,7 +19,7 @@ build: ; @echo "$(GREEN)✓ Building a function $(NC)\n"
 
 # plan terraform
 plan: ; @echo "$(GREEN)✓ Planning terraform $(NC)\n"
-	@cd test/fixtures/tf_module/ && terraform plan --out out.terraform
+	@cd test/fixtures/tf_module/ && terraform plan -var-file=testing.tfvars --out out.terraform
 	@$(MAKE) -s post-action
 
 # apply terraform
@@ -29,7 +29,7 @@ apply: ; @echo "$(GREEN)✓ Applying terraform $(NC)\n"
 
 # destroy all resources and amivar.tf file
 destroy: ; @echo "$(RED)✓ Destroying terraform resources $(NC)\n"
-	@cd test/fixtures/tf_module/ && terraform destroy -force	
+	@cd test/fixtures/tf_module/ && terraform destroy -force -var-file=testing.tfvars
 	@$(MAKE) -s post-action
 .PHONY: destroy
 
