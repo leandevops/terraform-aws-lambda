@@ -1,5 +1,6 @@
 # Module for creating cron based lambdas
 [![Maintained by Leandevops.io](https://img.shields.io/badge/maintained%20by-leandevops-green.svg)](https://img.shields.io/badge/maintained%20by-leandevops-green.svg)
+[![CircleCI](https://circleci.com/gh/leandevops/terraform-aws-lambda/tree/master.svg?style=svg)](https://circleci.com/gh/leandevops/terraform-aws-lambda/tree/master)
 
 What it does:
 - Creates a role for lambda

@@ -1,3 +1,6 @@
+##############################
+# output variables
+##############################
 output "lambda_arn" {
   value = "${aws_lambda_function.self.*.arn}"
 }
