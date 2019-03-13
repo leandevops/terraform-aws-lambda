@@ -10,7 +10,9 @@ jobs:
       - checkout
       - run:
           name: Terraform init
-          command: terraform init -input=false
+          command: |
+            cd module
+            terraform init -input=false
 
 workflows:
   version: 2
