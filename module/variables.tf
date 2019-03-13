@@ -1,5 +1,5 @@
 ##############################
-# input and output variables
+# input variables
 ##############################
 variable region {
   description = "The AWS region. Defaults to us-east-1"
