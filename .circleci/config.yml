@@ -50,16 +50,20 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - terraform-aws-vpc-{{ checksum "Gemfile.lock" }}
+            - terraform-aws-lambda-{{ checksum "Gemfile.lock" }}
 
       - run:
           name: Bundle Install
           command: bundle check || bundle install
       
       - save_cache:
-          key: terraform-aws-vpc-{{ checksum "Gemfile.lock" }}
+          key: terraform-aws-lambda-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+
+      - run:
+          name: Run make to zip a function code
+          command: make build
 
       - run:
           name: Run kitchen test
