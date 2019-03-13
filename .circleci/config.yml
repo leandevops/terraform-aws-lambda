@@ -1,0 +1,19 @@
+env: &docker    
+  docker:
+    - image: leandevopsio/terratest:0.1
+
+version: 2
+jobs:
+  terraform-init:
+    <<: *docker
+    steps:
+      - checkout
+      - run:
+          name: Terraform init
+          command: terraform init -input=false
+
+workflows:
+  version: 2
+  tf-workflow:
+    jobs:
+      - terraform-init
