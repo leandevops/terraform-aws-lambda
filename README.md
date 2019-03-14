@@ -24,7 +24,7 @@ What it does:
 - `security_group_ids` - The list of security groups
 
 ## Usage:
-```sh
+```hcl
 module "lambda_test" {    
     source              = "../../terraform/modules/aws_lambda_cron"
     lambda_name         = "test_inventory"
