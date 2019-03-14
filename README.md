@@ -1,4 +1,4 @@
-# Module for creating cron based lambdas
+# Terraform module to create a cron based lambda functions
 [![Maintained by Leandevops.io](https://img.shields.io/badge/maintained%20by-leandevops-green.svg)](https://img.shields.io/badge/maintained%20by-leandevops-green.svg)
 [![CircleCI](https://circleci.com/gh/leandevops/terraform-aws-lambda/tree/master.svg?style=svg)](https://circleci.com/gh/leandevops/terraform-aws-lambda/tree/master)
 
