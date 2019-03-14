@@ -10,9 +10,7 @@ jobs:
       - checkout
       - run:
           name: Terraform init
-          command: |
-            cd module
-            terraform init -input=false
+          command: make init
 
   terraform-validate:
     <<: *docker
@@ -67,7 +65,7 @@ jobs:
 
       - run:
           name: Run kitchen test
-          command: bundle exec kitchen test
+          command: make
 
 workflows:
   version: 2

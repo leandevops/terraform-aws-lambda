@@ -1,8 +1,8 @@
 require 'awspec'
 require 'hcl/checker'
 
-tf_state_file = 'terraform.tfstate.d/kitchen-terraform-default-aws/terraform.tfstate'
-module_hcl_file = 'test/fixtures/tf_module/main.tf'
+tf_state_file = 'terraform.tfstate'
+module_hcl_file = 'tests/fixtures/tf_module/main.tf'
 
 tf_state = JSON.parse(File.read(tf_state_file))
 
