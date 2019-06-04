@@ -57,6 +57,10 @@ resource "aws_lambda_function" "self" {
     subnet_ids         = "${var.subnet_ids}"
     security_group_ids = "${var.security_group_ids}"
   }
+  
+  environment {
+    variables = "${var.environment}"
+  }
 
   tags = {
     name         = "${var.lambda_name}"
