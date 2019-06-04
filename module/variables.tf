@@ -60,3 +60,9 @@ variable security_group_ids {
   description = "List of security groups ids"
   default     = []
 }
+
+variable "environment" {
+  description = "lambda environment variables"
+  type        = "map"
+  default     = {}
+}
